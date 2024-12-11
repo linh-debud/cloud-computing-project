@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bản đồ Việt Nam</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.6.5/ol.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+  </head>
+  <body>
+   
+    <div id="map"></div>
+
+
+    <div id="layerControl">
+      <label>
+        <input type="checkbox" id="switchProvince" checked /> Display city layer
+      </label>
+      <label>
+        <input type="checkbox" id="switchPort" /> Display province layer
+      </label>
+    </div>
+
+    <div class="annotation">
+        <p>Province: </p>
+        <span class="box"></span>
+    </div>
+
+    <div id="modalDetail">
+      <div class="modal-header">
+        <h2>Detailed Information</h2>
+
+        <span class="close-button" id="closeModal">&times;</span>
+      </div>
+      <div class="modal-body"></div>
+    </div>
+
+    <!-- ----- -->
+    <div class="modal_weather">
+        <div class="description_weather"><span id="description_value" ></span></div>
+        <div class="temp_weather"><span id="temp_value" ></span></div>
+        <div>
+        <div class="feels_like_weather">Feels Like: <span id="feels_like_value"></span></div>
+        <div class="humidity_weather">Humidity: <span id="humidity_value"></span></div>
+        <div class="wind_speed_weather">Wind Speed: <span id="wind_speed_value" ></span></div>
+        </div>
+        <div class="cloud">
+          <i class='bx bxs-cloud'></i>
+        </div>
+        <div>
+          <button class="close">
+            <i class='bx bx-x' ></i>
+          </button>
+        </div>
+    </div>
+    
+    <!-- ------ -->
+    <div class="forecast_weather">
+      <button id="toggleForecast" class="btn btn-primary"><i class='bx bx-chevrons-down'></i> </button>
+      <div id="forecastContainer" style="display: none;">
+      <h3>5 days weather forecast</h3>
+      <table class="forecast_table">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody id="forecast_body"></tbody>
+      </table>
+    </div>
+
+    <script src="Project_1.js"></script>
+  </body>
+</html>

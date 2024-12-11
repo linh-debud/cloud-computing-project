@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Nunito;
+}
+
+#map {
+  width: 100%;
+  height: 100vh;
+}
+
+#layerControl {
+  position: absolute; 
+  top: 560px;
+  left: 10px;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+label {
+  display: flex; 
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px; 
+}
+
+#modalDetail {
+  display: none; 
+  position: fixed; 
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.modal-body {
+  max-height: 400px; 
+  overflow-y: auto; 
+}
+
+.table {
+  width: 100%; 
+  border-collapse: collapse; 
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc; 
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.modal-header {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.close-button {
+  cursor: pointer; 
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.annotation {
+  width: 140px;
+  height: 50px;
+  background: white;
+  left: 10px;
+  top: 660px;
+  position: absolute;
+  border-radius: 10px;
+  padding: 2px 10px;
+}
+.annotation .box {
+  width: 20px;
+  height: 20px;
+  background: #ffcce6;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  top: 20px;
+  border-radius: 50%;
+}
+
+/* ----- */
+.modal_weather {
+  position: absolute;
+  width: 440px;
+  height: 220px;
+  left: 10px;
+  top: 10px;
+  background: #e6e6e6;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.description_weather, .name_country {
+  margin-left: 10px;
+}
+
+.temp_weather {
+  position: absolute;
+  font-size: 45px;
+  margin-top: 90px;
+  margin-left: 20px;
+}
+
+.humidity_weather, .feels_like_weather, .wind_speed_weather {
+  text-align: left;
+  margin-left: 190px;
+  margin-top: 5px;
+}
+
+.feels_like_weather {
+  margin-top: 95px;
+}
+
+.cloud {
+  position: absolute;
+  right: 130px;
+  top: 15px;
+  font-size: 100px;
+}
+
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 15px;
+
+}
+/* ----- */
+.forecast_weather {
+  position: absolute;
+  width: 440px;
+  height: auto;
+  left: 10px;
+  top: 210px;
+  background: #e6e6e6;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.forecast_table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.forecast_table th,
+.forecast_table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.forecast_table th {
+  background-color: #f2f2f2;
+}
